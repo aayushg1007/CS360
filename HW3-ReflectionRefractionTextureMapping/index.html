@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="./glMatrix-0.9.5.min.js"></script>
+  <script src="./_glInit.js"></script>
+  <script src="./_glsl.js"></script>
+  <script src="./_utils.js"></script>
+  <script src="./_shapes.js"></script>
+  <script src="./_events.js"></script>
+  <script src="./index.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #1a1a1a;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    canvas {
+      border: none;
+    }
+
+    #ui-container {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      pointer-events: none;
+      /* Allows clicks to pass through the container */
+    }
+
+    #instructions {
+      padding: 10px 15px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body onload="webGLStart();">
+  <canvas id="canva" style="border: none" width="800" height="800"></canvas>
+  <div id="ui-container">
+    <div id="instructions">
+      <p><strong>Controls:</strong></p>
+      <ul>
+        <li><strong>Rotate:</strong> Click and drag the mouse.</li>
+        <li><strong>Zoom:</strong> Use the mouse wheel.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
